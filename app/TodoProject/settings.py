@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'tododb',
         'USER':'postgres',
         'PASSWORD':'IIIdevops123!',
-        'HOST':'localhost'
+        'HOST':'django-postgresql-todo-master-db-postgresql-db-svc'
     }
 }
 
