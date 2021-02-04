@@ -67,7 +67,7 @@ stages:
         db.password: IIIdevops123!
         # 使用者初始想要建立的資料庫名稱
         db.name: tododb
-timeout: 60
+    timeout: 60
     when:
       branch:
         include:
