@@ -91,10 +91,11 @@ stages:
         git.repoName: ${CICD_GIT_REPO_NAME}
         web.type: spring
         web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
+        web.debug: true
         newman.enabled: true
         newman.runnerVersion: 1.0.0
         webinspect.enabled: true
-        webinspect.runnerVersion: latest
+        webinspect.runnerVersion: 1.0.0
         webinspect.startPath: /todos/list/
     when:
       branch:
