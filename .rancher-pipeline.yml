@@ -1,23 +1,23 @@
 stages:
-#- name: build and push docker image
-#  steps:
-#  - publishImageConfig:
-#      dockerfilePath: ./Dockerfile
-#      buildContext: .
-#      tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:${CICD_GIT_COMMIT}
-#      pushRemote: true
-#      registry: harbor71.iiidevops.org
-#    env:
-#      PLUGIN_BUILD_ARGS: --progress=tty --network=host
-#      PLUGIN_DEBUG: "true"
-#      PLUGIN_INSECURE: "true"
-#      PLUGIN_MIRROR: https://harbor71.iiidevops.org
-#      PLUGIN_MTU: "1000"
-#    when:
-#      branch:
-#        include:
-#        - master
-#        - develop
+- name: build and push docker image
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:${CICD_GIT_COMMIT}
+      pushRemote: true
+      registry: harbor71.iiidevops.org
+    env:
+      PLUGIN_BUILD_ARGS: --progress=tty --network=host
+      PLUGIN_DEBUG: "true"
+      PLUGIN_INSECURE: "true"
+      PLUGIN_MIRROR: https://harbor71.iiidevops.org
+      PLUGIN_MTU: "1000"
+    when:
+      branch:
+        include:
+        - master
+        - develop
 
 # (選擇性) 原始碼資安掃描(必須有安裝設定 Checkmarx)
 - name: Scan source code
@@ -90,8 +90,7 @@ stages:
         git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
         web.type: spring
-#        web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:${CICD_GIT_COMMIT}
-        web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:b085822d
+        web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:${CICD_GIT_COMMIT}
         newman.enabled: true
         newman.runnerVersion: 1.0.0
         webinspect.enabled: true
