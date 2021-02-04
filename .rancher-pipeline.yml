@@ -87,7 +87,7 @@ stages:
         harbor.host: harbor71.iiidevops.org
         git.url: ${CICD_GIT_URL}
         git.branch: ${CICD_GIT_BRANCH}
-        git.commitID: ${CICD_GIT_COMMIT}
+        git.commitID: "${CICD_GIT_COMMIT}"
         git.repoName: ${CICD_GIT_REPO_NAME}
         web.type: spring
         web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
