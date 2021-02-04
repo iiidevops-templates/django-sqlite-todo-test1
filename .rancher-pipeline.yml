@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:${CICD_GIT_COMMIT}
+      tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
       pushRemote: true
       registry: harbor71.iiidevops.org
     env:
@@ -25,7 +25,7 @@ stages:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:iii-dev-charts3-source-scan
       version: 0.1.0
-      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-source-scan
+      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-scan
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
@@ -90,7 +90,7 @@ stages:
         git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
         web.type: spring
-        web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:${CICD_GIT_COMMIT}
+        web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
         newman.enabled: true
         newman.runnerVersion: 1.0.0
         webinspect.enabled: true
