@@ -4,14 +4,14 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_REPO_NAME}:${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
+      tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:${CICD_GIT_COMMIT}
       pushRemote: true
-      registry: harbor-demo.iiidevops.org
+      registry: harbor71.iiidevops.org
     env:
       PLUGIN_BUILD_ARGS: --progress=tty --network=host
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
-      PLUGIN_MIRROR: https://harbor-demo.iiidevops.org
+      PLUGIN_MIRROR: https://harbor71.iiidevops.org
       PLUGIN_MTU: "1000"
     when:
       branch:
@@ -19,30 +19,31 @@ stages:
         - master
         - develop
 
-  # (選擇性) 原始碼資安掃描(必須有安裝設定 Checkmarx)
-  - name: Scan source code
-    steps:
-    - applyAppConfig:
-        catalogTemplate: cattle-global-data:iii-dev-charts3-source-scan
-        version: 0.1.0
-        name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-source-scan
-        targetNamespace: ${CICD_GIT_REPO_NAME}
-        answers:
-          pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
-          xip.ip: "10.20.0.77"
-          harbor.host: "harbor-demo.iiidevops.org"
-          # 基礎pipeline參數
-          git.host: "gitlab-demo.iiidevops.org"
-          git.url: ${CICD_GIT_URL}
-          git.repoName: ${CICD_GIT_REPO_NAME}
-          git.branch: ${CICD_GIT_BRANCH}
-          git.commitID: "${CICD_GIT_COMMIT}"
-          # web參數設定
-          checkmarx.enabled: true
-          checkmarx.runnerVersion: "latest"
-    when:
-      branch:
-        include:
+# (選擇性) 原始碼資安掃描(必須有安裝設定 Checkmarx)
+- name: Scan source code
+  steps:
+  - applyAppConfig:
+      catalogTemplate: cattle-global-data:iii-dev-charts3-source-scan
+      version: 0.1.0
+      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-source-scan
+      targetNamespace: ${CICD_GIT_REPO_NAME}
+      answers:
+        pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
+        harbor.host: "harbor71.iiidevops.org"
+        # 基礎pipeline參數
+        git.url: ${CICD_GIT_URL}
+        git.repoName: ${CICD_GIT_REPO_NAME}
+        git.branch: ${CICD_GIT_BRANCH}
+        git.commitID: ${CICD_GIT_COMMIT}
+        # web參數設定
+        checkmarx.enabled: true
+        checkmarx.runnerVersion: "1.0.0"
+        sonarqube.enabled: true
+        sonarqube.runnerVersion: latest
+  when:
+    branch:
+      include:
+        - master
         - checkmarx
 
 # (選擇性)部屬使用者的資料庫
@@ -56,7 +57,7 @@ stages:
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
         # 這裡是為了50與140環境測試
-        git.host: "gitlab-demo.iiidevops.org"
+        git.host: "gitlab71.iiidevops.org"
         # 這裡是為了告訴要處理的git來源為何
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.branch: ${CICD_GIT_BRANCH}
@@ -78,28 +79,25 @@ stages:
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:iii-dev-charts3-web
-      version: 0.2.1
-      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-web
-      #targetNamespace: p-v2nzs-pipeline
+      version: 0.3.0
+      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-serv
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
-        xip.ip: "10.20.0.77"
-        harbor.host: "harbor-demo.iiidevops.org"
-        # 基礎pipeline參數
-        git.host: "gitlab-demo.iiidevops.org"
+        harbor.host: harbor71.iiidevops.org
         git.url: ${CICD_GIT_URL}
         git.branch: ${CICD_GIT_BRANCH}
         git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
-        # web參數設定
         web.type: spring
-        # 10.50.1.63:5443/app/${CICD_GIT_REPO_NAME}-web
-        web.image: ${CICD_GIT_REPO_NAME}/${CICD_GIT_REPO_NAME}
-        web.tag: ${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
-        newman.enabled: false
+        web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:${CICD_GIT_COMMIT}
+        newman.enabled: true
+        newman.runnerVersion: 1.0.0
+        webinspect.enabled: true
+        webinspect.runnerVersion: latest
+        webinspect.startPath: /todos/list/
     when:
       branch:
         include:
-        - master
-        - develop
+          - master
+          - develop
