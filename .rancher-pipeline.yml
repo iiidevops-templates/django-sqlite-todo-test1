@@ -19,7 +19,6 @@ stages:
         - master
         - develop
 
-# (選擇性) 原始碼資安掃描(必須有安裝設定 Checkmarx)
 - name: Scan source code
   steps:
   - applyAppConfig:
@@ -46,17 +45,14 @@ stages:
         - master
         - checkmarx
 
-# (選擇性)部屬使用者的資料庫
 - name: Deploy db
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:iii-dev-charts3-db
       version: 0.1.0
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
-      #targetNamespace: p-v2nzs-pipeline
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
-        # 這裡是為了50與140環境測試
         git.host: "gitlab71.iiidevops.org"
         # 這裡是為了告訴要處理的git來源為何
         git.repoName: ${CICD_GIT_REPO_NAME}
@@ -74,7 +70,6 @@ stages:
         include:
           - master
 
-# 部屬使用者應用(app)
 - name: Deploy app-web
   steps:
   - applyAppConfig:
@@ -87,15 +82,15 @@ stages:
         harbor.host: harbor71.iiidevops.org
         git.url: ${CICD_GIT_URL}
         git.branch: ${CICD_GIT_BRANCH}
-        git.commitID: "${CICD_GIT_COMMIT}"
+        git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
-        web.type: spring
+        web.port: 80
         web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
         web.debug: true
         newman.enabled: true
         newman.runnerVersion: 1.0.0
         webinspect.enabled: true
-        webinspect.runnerVersion: 1.0.0
+        webinspect.runnerVersion: 1.0.1
         webinspect.startPath: /todos/list/
     when:
       branch:
