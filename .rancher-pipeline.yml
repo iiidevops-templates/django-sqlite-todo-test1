@@ -79,14 +79,13 @@ stages:
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
-        harbor.host: harbor71.iiidevops.org
+        harbor.host: harbor71.iiidevops.orgli
         git.url: ${CICD_GIT_URL}
         git.branch: ${CICD_GIT_BRANCH}
         git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
-        web.port: 80
+        web.port: 8000
         web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
-        web.debug: true
         newman.enabled: true
         newman.runnerVersion: 1.0.0
         webinspect.enabled: true
