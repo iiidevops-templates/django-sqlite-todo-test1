@@ -19,6 +19,7 @@ stages:
         - master
         - develop
 
+ 
 - name: Scan source code
   steps:
   - applyAppConfig:
@@ -49,11 +50,11 @@ stages:
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:iii-dev-charts3-db
-      version: 0.1.0
+      version: 0.1.1
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
-        git.host: "gitlab71.iiidevops.org"
+        git.host: "gitlab-demo.iiidevops.org"
         # 這裡是為了告訴要處理的git來源為何
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.branch: ${CICD_GIT_BRANCH}
@@ -64,7 +65,6 @@ stages:
         db.password: IIIdevops123!
         # 使用者初始想要建立的資料庫名稱
         db.name: tododb
-    timeout: 60
     when:
       branch:
         include:
@@ -79,7 +79,7 @@ stages:
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
-        harbor.host: harbor71.iiidevops.org
+        harbor.host: "harbor-demo.iiidevops.org"
         git.url: ${CICD_GIT_URL}
         git.branch: ${CICD_GIT_BRANCH}
         git.commitID: ${CICD_GIT_COMMIT}
