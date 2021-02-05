@@ -84,6 +84,7 @@ stages:
         git.branch: ${CICD_GIT_BRANCH}
         git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
+        web.debug: true
         web.port: 8080
         web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
         newman.enabled: true
