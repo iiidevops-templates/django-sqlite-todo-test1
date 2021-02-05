@@ -88,7 +88,7 @@ stages:
         web.port: 8080
         web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
         newman.enabled: true
-        newman.runnerVersion: 1.0.0
+        newman.runnerVersion: 1.0.1
         webinspect.enabled: true
         webinspect.runnerVersion: 1.0.1
     when:
