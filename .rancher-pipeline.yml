@@ -91,7 +91,6 @@ stages:
         newman.runnerVersion: 1.0.0
         webinspect.enabled: true
         webinspect.runnerVersion: 1.0.1
-        webinspect.startPath: /todos/list/
     when:
       branch:
         include:
