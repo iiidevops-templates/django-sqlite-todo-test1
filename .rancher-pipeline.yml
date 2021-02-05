@@ -86,6 +86,7 @@ stages:
         git.repoName: ${CICD_GIT_REPO_NAME}
         web.port: 8080
         web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
+        web.debug: true
         newman.enabled: true
         newman.runnerVersion: 2.0.0
         webinspect.enabled: true
