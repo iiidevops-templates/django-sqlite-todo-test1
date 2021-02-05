@@ -88,9 +88,9 @@ stages:
         web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
         web.debug: true
         newman.enabled: true
-        newman.runnerVersion: 1.0.1
+        newman.runnerVersion: 2.0.0
         webinspect.enabled: true
-        webinspect.runnerVersion: 1.0.1
+        webinspect.runnerVersion: 1.1.0
         ingress.externalHost: ingress71.iiidevops.org
     when:
       branch:
