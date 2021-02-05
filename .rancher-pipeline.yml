@@ -1,75 +1,75 @@
 stages:
-#- name: build and push docker image
-#  steps:
-#  - publishImageConfig:
-#      dockerfilePath: ./Dockerfile
-#      buildContext: .
-#      tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
-#      pushRemote: true
-#      registry: harbor-demo.iiidevops.org
-#    env:
-#      PLUGIN_BUILD_ARGS: --progress=tty --network=host
-#      PLUGIN_DEBUG: "true"
-#      PLUGIN_INSECURE: "true"
-#      PLUGIN_MIRROR: https://harbor-demo.iiidevops.org
-#      PLUGIN_MTU: "1000"
-#    when:
-#      branch:
-#        include:
-#        - master
-#        - develop
-#
-#
-#- name: Scan source code
-#  steps:
-#  - applyAppConfig:
-#      catalogTemplate: cattle-global-data:iii-dev-charts3-source-scan
-#      version: 0.1.0
-#      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-scan
-#      targetNamespace: ${CICD_GIT_REPO_NAME}
-#      answers:
-#        pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
-#        harbor.host: harbor-demo.iiidevops.org
-#        # 基礎pipeline參數
-#        git.url: ${CICD_GIT_URL}
-#        git.repoName: ${CICD_GIT_REPO_NAME}
-#        git.branch: ${CICD_GIT_BRANCH}
-#        git.commitID: ${CICD_GIT_COMMIT}
-#        # web參數設定
-#        checkmarx.enabled: true
-#        checkmarx.runnerVersion: 2.0.0
-#        sonarqube.enabled: true
-#        sonarqube.runnerVersion: latest
-#  when:
-#    branch:
-#      include:
-#        - master
-#        - checkmarx
-#
-#- name: Deploy db
-#  steps:
-#  - applyAppConfig:
-#      catalogTemplate: cattle-global-data:iii-dev-charts3-db
-#      version: 0.1.1
-#      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
-#      targetNamespace: ${CICD_GIT_REPO_NAME}
-#      answers:
-#        git.host: gitlab-demo.iiidevops.org
-#        # 這裡是為了告訴要處理的git來源為何
-#        git.repoName: ${CICD_GIT_REPO_NAME}
-#        git.branch: ${CICD_GIT_BRANCH}
-#        db.type: postgresql
-#        db.gui: true
-#        # 使用者資料庫管理密碼
-#        db.username: bear
-#        db.password: IIIdevops123!
-#        # 使用者初始想要建立的資料庫名稱
-#        db.name: tododb
-#    when:
-#      branch:
-#        include:
-#          - master
-#
+- name: build and push docker image
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
+      pushRemote: true
+      registry: harbor-demo.iiidevops.org
+    env:
+      PLUGIN_BUILD_ARGS: --progress=tty --network=host
+      PLUGIN_DEBUG: "true"
+      PLUGIN_INSECURE: "true"
+      PLUGIN_MIRROR: https://harbor-demo.iiidevops.org
+      PLUGIN_MTU: "1000"
+    when:
+      branch:
+        include:
+        - master
+        - develop
+
+
+- name: Scan source code
+  steps:
+  - applyAppConfig:
+      catalogTemplate: cattle-global-data:iii-dev-charts3-source-scan
+      version: 0.1.0
+      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-scan
+      targetNamespace: ${CICD_GIT_REPO_NAME}
+      answers:
+        pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
+        harbor.host: harbor-demo.iiidevops.org
+        # 基礎pipeline參數
+        git.url: ${CICD_GIT_URL}
+        git.repoName: ${CICD_GIT_REPO_NAME}
+        git.branch: ${CICD_GIT_BRANCH}
+        git.commitID: ${CICD_GIT_COMMIT}
+        # web參數設定
+        checkmarx.enabled: true
+        checkmarx.runnerVersion: 2.0.0
+        sonarqube.enabled: true
+        sonarqube.runnerVersion: latest
+  when:
+    branch:
+      include:
+        - master
+        - checkmarx
+
+- name: Deploy db
+  steps:
+  - applyAppConfig:
+      catalogTemplate: cattle-global-data:iii-dev-charts3-db
+      version: 0.1.1
+      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
+      targetNamespace: ${CICD_GIT_REPO_NAME}
+      answers:
+        git.host: gitlab-demo.iiidevops.org
+        # 這裡是為了告訴要處理的git來源為何
+        git.repoName: ${CICD_GIT_REPO_NAME}
+        git.branch: ${CICD_GIT_BRANCH}
+        db.type: postgresql
+        db.gui: true
+        # 使用者資料庫管理密碼
+        db.username: bear
+        db.password: IIIdevops123!
+        # 使用者初始想要建立的資料庫名稱
+        db.name: tododb
+    when:
+      branch:
+        include:
+          - master
+
 - name: Deploy app-web
   steps:
   - applyAppConfig:
