@@ -51,7 +51,7 @@ stages:
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:iii-dev-charts3-db
-      version: 0.1.0
+      version: 0.1.1
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
       #targetNamespace: p-v2nzs-pipeline
       targetNamespace: ${CICD_GIT_REPO_NAME}
@@ -68,7 +68,6 @@ stages:
         db.password: IIIdevops123!
         # 使用者初始想要建立的資料庫名稱
         db.name: tododb
-    timeout: 60
     when:
       branch:
         include:
