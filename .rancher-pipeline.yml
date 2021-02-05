@@ -87,7 +87,7 @@ stages:
         web.port: 8080
         web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
         newman.enabled: true
-        newman.runnerVersion: 2.0.0
+        newman.runnerVersion: 2.0.1
         webinspect.enabled: true
         webinspect.runnerVersion: 1.1.0
         ingress.externalHost: ingress-demo.iiidevops.org
