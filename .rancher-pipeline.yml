@@ -6,12 +6,12 @@ stages:
       buildContext: .
       tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
       pushRemote: true
-      registry: harbor71.iiidevops.org
+      registry: harbor-demo.iiidevops.org
     env:
       PLUGIN_BUILD_ARGS: --progress=tty --network=host
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
-      PLUGIN_MIRROR: https://harbor71.iiidevops.org
+      PLUGIN_MIRROR: https://harbor-demo.iiidevops.org
       PLUGIN_MTU: "1000"
     when:
       branch:
@@ -29,7 +29,7 @@ stages:
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
-        harbor.host: harbor71.iiidevops.org
+        harbor.host: harbor-demo.iiidevops.org
         # 基礎pipeline參數
         git.url: ${CICD_GIT_URL}
         git.repoName: ${CICD_GIT_REPO_NAME}
@@ -37,7 +37,7 @@ stages:
         git.commitID: ${CICD_GIT_COMMIT}
         # web參數設定
         checkmarx.enabled: true
-        checkmarx.runnerVersion: 1.0.1
+        checkmarx.runnerVersion: 2.0.0
         sonarqube.enabled: true
         sonarqube.runnerVersion: latest
   when:
@@ -54,7 +54,7 @@ stages:
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
-        git.host: gitlab71.iiidevops.org
+        git.host: gitlab-demo.iiidevops.org
         # 這裡是為了告訴要處理的git來源為何
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.branch: ${CICD_GIT_BRANCH}
@@ -79,7 +79,7 @@ stages:
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
-        harbor.host: harbor71.iiidevops.org
+        harbor.host: harbor-demo.iiidevops.org
         git.url: ${CICD_GIT_URL}
         git.branch: ${CICD_GIT_BRANCH}
         git.commitID: ${CICD_GIT_COMMIT}
@@ -90,7 +90,7 @@ stages:
         newman.runnerVersion: 2.0.0
         webinspect.enabled: true
         webinspect.runnerVersion: 1.1.0
-        ingress.externalHost: ingress71.iiidevops.org
+        ingress.externalHost: ingress-demo.iiidevops.org
     when:
       branch:
         include:
