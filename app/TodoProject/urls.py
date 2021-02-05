@@ -16,10 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
-from app.todos import views
-
 urlpatterns = [
-    path(r'^$',views.list_todo_items),
+    path(r'^$',include('todos.urls')),
     path('admin/', admin.site.urls),
     path('todos/',include('todos.urls'))
 ]
