@@ -37,7 +37,7 @@ stages:
         git.commitID: ${CICD_GIT_COMMIT}
         # web參數設定
         checkmarx.enabled: true
-        checkmarx.runnerVersion: 1.0.1
+        checkmarx.runnerVersion: 2.0.0
         sonarqube.enabled: true
         sonarqube.runnerVersion: latest
   when:
