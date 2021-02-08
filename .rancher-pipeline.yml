@@ -36,9 +36,9 @@ stages:
         git.branch: ${CICD_GIT_BRANCH}
         git.commitID: ${CICD_GIT_COMMIT}
         # web參數設定
-        checkmarx.enabled: true
+        checkmarx.enabled: false
         checkmarx.runnerVersion: 2.0.0
-        sonarqube.enabled: true
+        sonarqube.enabled: false
         sonarqube.runnerVersion: latest
   when:
     branch:
@@ -84,9 +84,9 @@ stages:
         git.repoName: ${CICD_GIT_REPO_NAME}
         web.port: 8080
         web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
-        newman.enabled: true
+        newman.enabled: false
         newman.runnerVersion: 2.0.1
-        webinspect.enabled: true
+        webinspect.enabled: false
         webinspect.runnerVersion: 1.1.0
         ingress.externalHost: ingress-demo.iiidevops.org
         db.username: iiidevops
