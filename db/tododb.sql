@@ -240,8 +240,4 @@ CREATE TABLE "public"."todos_todo" (
     CONSTRAINT "todos_todo_pkey" PRIMARY KEY ("id")
 ) WITH (oids = false);
 
-INSERT INTO "todos_todo" ("id", "content") VALUES
-(1,	'testbear'),
-(2,	'bearisbear');
-
 -- 2021-02-03 02:39:18.483002+00
