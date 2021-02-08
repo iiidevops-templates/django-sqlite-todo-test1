@@ -50,7 +50,7 @@ stages:
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:iii-dev-charts3-db
-      version: 0.1.1
+      version: 0.2.0
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
@@ -60,11 +60,9 @@ stages:
         git.branch: ${CICD_GIT_BRANCH}
         db.type: postgresql
         db.gui: true
-        # 使用者資料庫管理密碼
-        db.username: bear
-        db.password: IIIdevops123!
-        # 使用者初始想要建立的資料庫名稱
-        db.name: tododb
+        db.username: iiidevops
+        db.password: templatePassword
+        db.name: todo_db
     when:
       branch:
         include:
@@ -91,6 +89,10 @@ stages:
         webinspect.enabled: true
         webinspect.runnerVersion: 1.1.0
         ingress.externalHost: ingress-demo.iiidevops.org
+        db.username: iiidevops
+        db.password: templatePassword
+        db.name: todo_db
+
     when:
       branch:
         include:
