@@ -82,6 +82,10 @@ stages:
     - sourceName: rancher
       sourceKey: rancher-url
       targetKey: rancher_url
+    when:
+      branch:
+        include:
+          - master
 
 - name: Deploy app-web
   steps:
@@ -128,6 +132,10 @@ stages:
     - sourceName: rancher
       sourceKey: rancher-url
       targetKey: rancher_url
+    when:
+      branch:
+        include:
+          - master
 
 - name: Postman test
   steps:
