@@ -98,13 +98,13 @@ stages:
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
-        harbor.host: ${CICD_REGISTRY}
+        harbor.host: harbor71.iiidevops.org
         git.url: ${CICD_GIT_URL}
         git.branch: ${CICD_GIT_BRANCH}
         git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
         web.port: 8080
-        web.imageTag: ${CICD_IMAGE}:latest
+        web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
         # db settings, all should be as same as those in deploy-db stage
         db.releaseName: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
         db.username: iiidevops
