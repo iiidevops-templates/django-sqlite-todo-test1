@@ -9,7 +9,6 @@ Content Discussed :
 - CRUD Operations using Django ORM
 
 ## Get the Code
-
 ```
 $ git clone https://github.com/CodAffection/Django-ToDo-App-with-PostgreSQL.git
 ```
