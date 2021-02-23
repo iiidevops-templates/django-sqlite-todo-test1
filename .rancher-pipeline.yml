@@ -28,7 +28,7 @@ stages:
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-cmx
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
-        # Common answers
+        # Test common answers
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
         git.url: ${CICD_GIT_URL}
         git.repoName: ${CICD_GIT_REPO_NAME}
