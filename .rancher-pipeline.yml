@@ -50,15 +50,17 @@ stages:
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
-        git.url: ${CICD_GIT_URL}
-        git.repoName: ${CICD_GIT_REPO_NAME}
-        git.branch: ${CICD_GIT_BRANCH}
         db.type: postgresql
         # Always true in this time
         db.gui: true
         db.username: iiidevops
         db.password: templatePassword
         db.name: todo_db
+        # Common project info
+        git.url: ${CICD_GIT_URL}
+        git.repoName: ${CICD_GIT_REPO_NAME}
+        git.branch: ${CICD_GIT_BRANCH}
+        git.commitID: ${CICD_GIT_COMMIT}
     when:
       branch:
         include:
