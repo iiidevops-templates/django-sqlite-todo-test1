@@ -44,20 +44,18 @@ stages:
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:iii-dev-charts3-db
-      version: 0.2.0
+      version: 0.2.1
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
-        git.host: gitlab-demo.iiidevops.org
-        # 這裡是為了告訴要處理的git來源為何
+        git.url: ${CICD_GIT_URL}
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.branch: ${CICD_GIT_BRANCH}
         db.type: postgresql
+        # Always true in this time
         db.gui: true
-        # 使用者資料庫管理密碼
         db.username: iiidevops
         db.password: templatePassword
-        # 使用者初始想要建立的資料庫名稱
         db.name: todo_db
     when:
       branch:
