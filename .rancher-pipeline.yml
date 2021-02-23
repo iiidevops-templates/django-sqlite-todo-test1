@@ -20,28 +20,27 @@ stages:
 #        - develop
 #        - 71
 
-#- name: Checkmarx source code scan
-#  steps:
-#  - applyAppConfig:
-#      catalogTemplate: cattle-global-data:iii-dev-charts3-scan-checkmarx
-#      version: 0.1.0
-#      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-cmx
-#      targetNamespace: ${CICD_GIT_REPO_NAME}
-#      answers:
-#        # Common answers
-#        pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
-#        harbor.host: harbor71.iiidevops.org
-#        git.url: ${CICD_GIT_URL}
-#        git.repoName: ${CICD_GIT_REPO_NAME}
-#        git.branch: ${CICD_GIT_BRANCH}
-#        git.commitID: ${CICD_GIT_COMMIT}
-#  when:
-#    branch:
-#      include:
-#        - master
-#        - checkmarx
-#        - 71
-#
+- name: Checkmarx source code scan
+  steps:
+  - applyAppConfig:
+      catalogTemplate: cattle-global-data:iii-dev-charts3-scan-checkmarx
+      version: 0.1.0
+      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-cmx
+      targetNamespace: ${CICD_GIT_REPO_NAME}
+      answers:
+        # Common answers
+        pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
+        git.url: ${CICD_GIT_URL}
+        git.repoName: ${CICD_GIT_REPO_NAME}
+        git.branch: ${CICD_GIT_BRANCH}
+        git.commitID: ${CICD_GIT_COMMIT}
+  when:
+    branch:
+      include:
+        - master
+        - checkmarx
+        - 71
+
 - name: Deploy db
   steps:
   - applyAppConfig:
