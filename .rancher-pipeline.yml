@@ -47,7 +47,7 @@ stages:
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
-        db.type: postgresql
+        db.type: mariadb
         # Always true in this time
         db.gui: true
         db.username: iiidevops
