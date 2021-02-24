@@ -53,6 +53,7 @@ stages:
         db.username: iiidevops
         db.password: templatePassword
         db.name: todo_db
+        db.tag: 13.2.0
         # Common project info
         git.url: ${CICD_GIT_URL}
         git.repoName: ${CICD_GIT_REPO_NAME}

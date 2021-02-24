@@ -1,0 +1,24 @@
+{
+  "name": "Python Django with PostgreSQL - Todo",
+  "description": "Python 3.7 / Django 3.1.7 / PostgreSQL 13.2.0",
+  "arguments": [
+    {
+      "key": "db.username",
+      "display": "DB Username",
+      "default_value": "iiidevops",
+      "input_type": "text"
+    },
+    {
+      "key": "db.password",
+      "display": "DB Password",
+      "default_value": "templatePassword",
+      "input_type": "password"
+    },
+    {
+      "key": "db.name",
+      "display": "DB Name",
+      "default_value": "todo_db",
+      "input_type": "text"
+    }
+  ]
+}
