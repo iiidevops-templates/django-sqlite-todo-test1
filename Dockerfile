@@ -1,4 +1,5 @@
-FROM python:3.7
+FROM dockerhub/library/python:3.7
+# FROM python:3.7
 RUN pip install django psycopg2
 
 COPY ./app /app
