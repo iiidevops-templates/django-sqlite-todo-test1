@@ -13,7 +13,7 @@ Content Discussed :
 ``` 
 docker-compose up -d --build 
 ```
-部屬包含django網頁+資料庫+資料庫管理系統, 驗證後即可上傳程式碼
+部屬包含django網頁+Sqlite, 驗證後即可上傳程式碼
 
 ## Get the Code
 ```
