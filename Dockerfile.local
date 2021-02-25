@@ -1,7 +1,5 @@
-#FROM dockerhub/library/python:3.7
 FROM python:3.7
-RUN apt-get update && apt-get install -y libmariadb-dev
-RUN pip install django==3.1.7 mysqlclient
+RUN pip install django==3.1.7
 
 COPY ./app /app
 RUN pip freeze > requirement.txt
