@@ -1,5 +1,5 @@
 stages:
-- name: build and push docker image
+- name: Build--build and push docker image
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
@@ -19,7 +19,7 @@ stages:
         - master
         - develop
 
-- name: Checkmarx source code scan
+- name: Test--Checkmarx source code scan
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:iii-dev-charts3-scan-checkmarx
@@ -39,7 +39,7 @@ stages:
         - master
         - checkmarx
 
-- name: Deploy app-web
+- name: Deploy--Web
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:iii-dev-charts3-web
@@ -61,7 +61,7 @@ stages:
           - master
           - develop
 
-- name: Wait web deployment
+- name: Deploy--Wait Web deployment
   steps:
   - runScriptConfig:
       image: iiiorg/deployment-waiter:0.0.2
@@ -84,7 +84,7 @@ stages:
         include:
           - master
 
-- name: Postman test
+- name: Test--Postman
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:iii-dev-charts3-test-postman
@@ -105,7 +105,7 @@ stages:
       include:
         - master
 
-- name: Webinspect test
+- name: Test--Webinspect
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:iii-dev-charts3-test-webinspect
