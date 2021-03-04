@@ -1,5 +1,6 @@
 # Django-ToDo-App-with-PostgreSQL
 
+## 程式碼參考教學來源
 How to build Django To-Do app with PostgreSQL
 
 Content Discussed :
@@ -7,9 +8,8 @@ Content Discussed :
 - How to work with Database in Django
 - Routing in Django
 - CRUD Operations using Django ORM
-
-## 程式碼參考教學來源
- :tv: Video tutorial on this same topic  
+- 
+:tv: Video tutorial on this same topic  
  Url : https://youtu.be/Nnoxz9JGdLU
  ```
 $ git clone https://github.com/CodAffection/Django-ToDo-App-with-PostgreSQL.git
@@ -42,6 +42,5 @@ ENV 環境變數名稱3 值3
 3. 若相關python套件需要額外系統套件(apt、yum、apk等)
 若專案開發需求上可能有針對專案需要的系統套件的話，由於目前此需求不在系統開發考慮範圍內，因此可能要麻煩使用者透過修改`Dockerfile`的形式去加入
 ```dockerfile
-
+RUN apt update && apt install -y 安裝的套件名稱1 安裝的套件名稱2
 ```
-
