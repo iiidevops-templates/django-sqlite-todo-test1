@@ -1,0 +1,1178 @@
+{
+  "time": 1620890491442,
+  "version": {
+    "sideex": [
+      3,
+      5,
+      3
+    ],
+    "format": [
+      2,
+      0,
+      0
+    ]
+  },
+  "suites": [
+    {
+      "title": "django-sqlite-todo",
+      "enableOnPlaying": true,
+      "cases": [
+        {
+          "title": "Untitled Test Case 14tac",
+          "enableOnPlaying": true,
+          "networkSpeed": 7.7,
+          "records": [
+            {
+              "name": "open",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "${target_origin}"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "${target_origin}"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "setViewportSize",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "1036,718"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<input/>)"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=content"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//div[1]/input[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@name='content']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=input[name=\"content\"]"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBM04BtAgXRZosNAK5hefCiAxhmUjBDyhIAcwByEALYJmQ0bMpgAnjR34wCKgZBQANhBQpmAMwxJNMKNjBIMtqVhaZjbeCFjWthhQ9JhYAPJI7MjMZAC+lFF0SuAQ6kHMnHBSdg5O+HpiMCq+IjRSkdFgsQlJSCkg6dJQNG24WCK2thlQOLjKuRraBVzF9o66wpXVGLUwEDSmWOwABBZWMEKu9VEx2C3J+GnDUHjcfMOy5hjsGCjbAF7rHUA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "76,13"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "sendKeys",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<input/>)"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=content"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//div[1]/input[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@name='content']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=input[name=\"content\"]"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBM04BtAgXRZosNAK5hefCiAxhmUjBDyhIAcwByEALYJmQ0bMpgAnjR34wCKgZBQANhBQpmAMwxJNMKNjBIMtqVhaZjbeCFjWthhQ9JhYAPJI7MjMZAC+lFF0SuAQ6kHMnHBSdg5O+HpiMCq+IjRSkdFgsQlJSCkg6dJQNG24WCK2thlQOLjKuRraBVzF9o66wpXVGLUwEDSmWOwABBZWMEKu9VEx2C3J+GnDUHjcfMOy5hjsGCjbAF7rHUA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "happy to do "
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<span/>)"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//span[1]"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=span.input-group-text.bg-white.py-0"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehZTqwG0CBdCkBjDMBGCHlCQA5gDkIAWwTMOEHJSgAbCChTM0WGgFcwMKUgyGaMMAipgABACMpMAO4M0N+zQCeMAAwCGhhQ9JhYAPJIACbIzGQAvpQhdBLgELIKSvjRaHACmtq6+PpGJmYWVhA0NAhY0fY2djD6AGYYQSFh2FGxSPEgSYJQNP24WIYaGslQOOOT08NQeFySGXKKzI7GYNgCYD61yoaO8p4FWjpbYFhONzAo8o22Jm0dlMGhYOG9cfiJvBmwnwu2iGBQ9gAXtVBkA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "9,11"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<i/>)"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//button[1]/i[1]"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=i.fa.fa-plus-circle.fa-lg"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYCMBXMMbAbQIBdFmgGCKIDGGYSMEPKEgBzAHIQAtgmZoJUADYQUKZgDMIAAjMwaezihhQ0SfQksQYepRL0Yo9TFgA8kgAJsjMZAC+lL50CuAQqhpa+Fw82BJgAJ40KSAonOzqaNKU+obGqWBY5uzVMCjq5mAIVGAwaFgmGN6+-tjBYUgRINGSUDTDuFicenoxUDjTs-PjUHh8ggvS+LwhGCjmAF4QNKNAA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "15,6"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 1,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<input/>)"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=content"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//div[1]/input[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@name='content']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=input[name=\"content\"]"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBM04BtAgXRZosNAK5hefCiAxhmUjBDyhIAcwByEALYJmQ0bMpgAnjR34wCKgZBQANhBQpmAMwxJNMKNjBIMtqVhaZjbeCFjWthhQ9JhYAPJI7MjMZAC+lFF0SuAQ6kHMnHBSdg5O+HpiMCq+IjRSkdFgsQlJSCkg6dJQNG24WCK2thlQOLjKuRraBVzF9o66wpXVGLUwEDSmWOwABBZWMEKu9VEx2C3J+GnDUHjcfMOy5hjsGCjbAF7rHUA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "259,19"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "sendKeys",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<input/>)"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=content"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//div[1]/input[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@name='content']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=input[name=\"content\"]"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBM04BtAgXRZosNAK5hefCiAxhmUjBDyhIAcwByEALYJmQ0bMpgAnjR34wCKgZBQANhBQpmAMwxJNMKNjBIMtqVhaZjbeCFjWthhQ9JhYAPJI7MjMZAC+lFF0SuAQ6kHMnHBSdg5O+HpiMCq+IjRSkdFgsQlJSCkg6dJQNG24WCK2thlQOLjKuRraBVzF9o66wpXVGLUwEDSmWOwABBZWMEKu9VEx2C3J+GnDUHjcfMOy5hjsGCjbAF7rHUA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "bear is bear"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<i/>)"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//button[1]/i[1]"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=i.fa.fa-plus-circle.fa-lg"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYCMBXMMbAbQIBdFmgGCKIDGGYSMEPKEgBzAHIQAtgmZoJUADYQUKZgDMIAAjMwaezihhQ0SfQksQYepRL0Yo9TFgA8kgAJsjMZAC+lL50CuAQqhpa+Fw82BJgAJ40KSAonOzqaNKU+obGqWBY5uzVMCjq5mAIVGAwaFgmGN6+-tjBYUgRINGSUDTDuFicenoxUDjTs-PjUHh8ggvS+LwhGCjmAF4QNKNAA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "16,6"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 1,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "dragAndDrop",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<input/>)"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=content"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//div[1]/input[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@name='content']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=input[name=\"content\"]"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBM04BtAgXRZosNAK5hefCiAxhmUjBDyhIAcwByEALYJmQ0bMpgAnjR34wCKgZBQANhBQpmAMwxJNMKNjBIMtqVhaZjbeCFjWthhQ9JhYAPJI7MjMZAC+lFF0SuAQ6kHMnHBSdg5O+HpiMCq+IjRSkdFgsQlJSCkg6dJQNG24WCK2thlQOLjKuRraBVzF9o66wpXVGLUwEDSmWOwABBZWMEKu9VEx2C3J+GnDUHjcfMOy5hjsGCjbAF7rHUA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "{\"StartPoint\":{\"X\":298,\"Y\":26},\"Movements\":[{\"TD\":31,\"OX\":-1,\"OY\":0}]}"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "sendKeys",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<input/>)"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=content"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//div[1]/input[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@name='content']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=input[name=\"content\"]"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBM04BtAgXRZosNAK5hefCiAxhmUjBDyhIAcwByEALYJmQ0bMpgAnjR34wCKgZBQANhBQpmAMwxJNMKNjBIMtqVhaZjbeCFjWthhQ9JhYAPJI7MjMZAC+lFF0SuAQ6kHMnHBSdg5O+HpiMCq+IjRSkdFgsQlJSCkg6dJQNG24WCK2thlQOLjKuRraBVzF9o66wpXVGLUwEDSmWOwABBZWMEKu9VEx2C3J+GnDUHjcfMOy5hjsGCjbAF7rHUA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "I am bear"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<i/>)"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//button[1]/i[1]"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=i.fa.fa-plus-circle.fa-lg"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYCMBXMMbAbQIBdFmgGCKIDGGYSMEPKEgBzAHIQAtgmZoJUADYQUKZgDMIAAjMwaezihhQ0SfQksQYepRL0Yo9TFgA8kgAJsjMZAC+lL50CuAQqhpa+Fw82BJgAJ40KSAonOzqaNKU+obGqWBY5uzVMCjq5mAIVGAwaFgmGN6+-tjBYUgRINGSUDTDuFicenoxUDjTs-PjUHh8ggvS+LwhGCjmAF4QNKNAA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "8,8"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 3,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<input/>)"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=content"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//div[1]/input[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@name='content']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=input[name=\"content\"]"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBM04BtAgXRZosNAK5hefCiAxhmUjBDyhIAcwByEALYJmQ0bMpgAnjR34wCKgZBQANhBQpmAMwxJNMKNjBIMtqVhaZjbeCFjWthhQ9JhYAPJI7MjMZAC+lFF0SuAQ6kHMnHBSdg5O+HpiMCq+IjRSkdFgsQlJSCkg6dJQNG24WCK2thlQOLjKuRraBVzF9o66wpXVGLUwEDSmWOwABBZWMEKu9VEx2C3J+GnDUHjcfMOy5hjsGCjbAF7rHUA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "269,7"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "sendKeys",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<input/>)"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=content"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//div[1]/input[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@name='content']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=input[name=\"content\"]"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBM04BtAgXRZosNAK5hefCiAxhmUjBDyhIAcwByEALYJmQ0bMpgAnjR34wCKgZBQANhBQpmAMwxJNMKNjBIMtqVhaZjbeCFjWthhQ9JhYAPJI7MjMZAC+lFF0SuAQ6kHMnHBSdg5O+HpiMCq+IjRSkdFgsQlJSCkg6dJQNG24WCK2thlQOLjKuRraBVzF9o66wpXVGLUwEDSmWOwABBZWMEKu9VEx2C3J+GnDUHjcfMOy5hjsGCjbAF7rHUA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "IIIdevops to do list test"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<i/>)"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//button[1]/i[1]"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=i.fa.fa-plus-circle.fa-lg"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYCMBXMMbAbQIBdFmgGCKIDGGYSMEPKEgBzAHIQAtgmZoJUADYQUKZgDMIAAjMwaezihhQ0SfQksQYepRL0Yo9TFgA8kgAJsjMZAC+lL50CuAQqhpa+Fw82BJgAJ40KSAonOzqaNKU+obGqWBY5uzVMCjq5mAIVGAwaFgmGN6+-tjBYUgRINGSUDTDuFicenoxUDjTs-PjUHh8ggvS+LwhGCjmAF4QNKNAA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "9,2"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 3,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<input/>)"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=content"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//div[1]/input[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@name='content']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=input[name=\"content\"]"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBM04BtAgXRZosNAK5hefCiAxhmUjBDyhIAcwByEALYJmQ0bMpgAnjR34wCKgZBQANhBQpmAMwxJNMKNjBIMtqVhaZjbeCFjWthhQ9JhYAPJI7MjMZAC+lFF0SuAQ6kHMnHBSdg5O+HpiMCq+IjRSkdFgsQlJSCkg6dJQNG24WCK2thlQOLjKuRraBVzF9o66wpXVGLUwEDSmWOwABBZWMEKu9VEx2C3J+GnDUHjcfMOy5hjsGCjbAF7rHUA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "260,22"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "sendKeys",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<input/>)"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=content"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//div[1]/input[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@name='content']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=input[name=\"content\"]"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBM04BtAgXRZosNAK5hefCiAxhmUjBDyhIAcwByEALYJmQ0bMpgAnjR34wCKgZBQANhBQpmAMwxJNMKNjBIMtqVhaZjbeCFjWthhQ9JhYAPJI7MjMZAC+lFF0SuAQ6kHMnHBSdg5O+HpiMCq+IjRSkdFgsQlJSCkg6dJQNG24WCK2thlQOLjKuRraBVzF9o66wpXVGLUwEDSmWOwABBZWMEKu9VEx2C3J+GnDUHjcfMOy5hjsGCjbAF7rHUA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "test1 "
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<i/>)"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//button[1]/i[1]"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=i.fa.fa-plus-circle.fa-lg"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYCMBXMMbAbQIBdFmgGCKIDGGYSMEPKEgBzAHIQAtgmZoJUADYQUKZgDMIAAjMwaezihhQ0SfQksQYepRL0Yo9TFgA8kgAJsjMZAC+lL50CuAQqhpa+Fw82BJgAJ40KSAonOzqaNKU+obGqWBY5uzVMCjq5mAIVGAwaFgmGN6+-tjBYUgRINGSUDTDuFicenoxUDjTs-PjUHh8ggvS+LwhGCjmAF4QNKNAA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "12,12"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 1,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<input/>)"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=content"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//div[1]/input[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@name='content']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=input[name=\"content\"]"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBM04BtAgXRZosNAK5hefCiAxhmUjBDyhIAcwByEALYJmQ0bMpgAnjR34wCKgZBQANhBQpmAMwxJNMKNjBIMtqVhaZjbeCFjWthhQ9JhYAPJI7MjMZAC+lFF0SuAQ6kHMnHBSdg5O+HpiMCq+IjRSkdFgsQlJSCkg6dJQNG24WCK2thlQOLjKuRraBVzF9o66wpXVGLUwEDSmWOwABBZWMEKu9VEx2C3J+GnDUHjcfMOy5hjsGCjbAF7rHUA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "263,23"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "sendKeys",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<input/>)"
+                  },
+                  {
+                    "type": "name",
+                    "value": "name=content"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//div[1]/input[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//input[@name='content']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=input[name=\"content\"]"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBM04BtAgXRZosNAK5hefCiAxhmUjBDyhIAcwByEALYJmQ0bMpgAnjR34wCKgZBQANhBQpmAMwxJNMKNjBIMtqVhaZjbeCFjWthhQ9JhYAPJI7MjMZAC+lFF0SuAQ6kHMnHBSdg5O+HpiMCq+IjRSkdFgsQlJSCkg6dJQNG24WCK2thlQOLjKuRraBVzF9o66wpXVGLUwEDSmWOwABBZWMEKu9VEx2C3J+GnDUHjcfMOy5hjsGCjbAF7rHUA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "test2 "
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<button/>)"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//button[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "//button[@type='submit']"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=button.btn.btn-sm.text-info"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYCMBXMMbAbQIBdCiAxhmIjBDyhIAcwByEALYJmXHthFgAnjTX4UndsrTjKUADYQUKdWCwACdg5gpljsAipgYaLABmGCKWGFD0mFgA8kgAJsjMZAC+lGF0MuAQiioGICh0OBbWtsz+NNwwckgYnDQwXj7OcjAA7gxmCI40OjAADCFhEdgx8UiJICmiUDRjuFiclpapUDhzC0tTUHh8sllKqqUiVjZ2+AEQjucwNJacKDBQaEhWnVeWcgPhYJEjCfjJgmW4nwvFiGBQjgAXhAaBMgA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 1,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<button/>)"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//li[5]/form[1]/button[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "xpath=(//button[@type='submit'])[5]"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=li.list-group-item:nth-child(5) > form.float-right.d-inline > button.btn:nth-child(2)"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBs0BtAVgF0WAMwxIAtlwICARgFcwYbBL4UQGMMxUYIeUJADmAOQiiEzWfOwqwATxqn8KGVNFp1lKOwgoUZsDkrsGFD0mFgA8kgAJsjMZAC+lEF0OuAQhsb2IMJiKtBgocwsCpEYKCzR7AhgCAD6xRgsAGwsKiaMGJHMNKVuIB5ePviCgfQwSGh6DGAABJEwaFicWKYBQSHYEdFIsSAJqlA027i6aUYmzAs0cla2mQxokdH+IFgZzFAoSIIuj5UA7hAkFUMABrBDPOAQdgyTIABhkAGYxABOSJSOB6A4ARx4UAAVn8EWA8QB2QRSZBYhAgpBSDAALxBehoeMagkhrjgcC0aBo1kceKxMggJMiyJkWIATFI8dYVIFgvkNlEYvh4okoDhcFgZOx2BqoHguCd0ud8GgVP1vMxBIDpraYGAkF4GDAoTMHew9NNqlQwDBIhAsHpkPaRv7xpNegr1uEVUdCLs+Br1ObjBS7Wgs9FuTQUPVOPnqvndkA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 3,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<i/>)"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//li[4]/form[1]/button[1]/i[1]"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=li.list-group-item:nth-child(4) > form.float-right.d-inline > button.btn:nth-child(2) > i.far.fa-trash-alt.fa-lg.text-danger.float-right"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBs0BtAFgF0WAMwxIAtlwICARgFcwYbBIHdJFEBjDM1GCHlCQA5gDkIohMzRqo7CChTNBEJAAJHMMElsMYEdmFcQMOwGzmAIVGAwACYQWAbIruw6kUhoBgyalElQ9JhYAPJIUcjMZAC+lBhQdHrgEMam5viy8thqYACeNE0gKDJSomiZINa29s1gOFlVudiFxUilIBXq1Yu4WDLs7JVQOBtbO6tQeFx8u5rNCE5oKFLXLmhPxXAYNCgKURicH2Efy0A"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "11,15"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 2,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<i/>)"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//li[5]/form[1]/button[1]/i[1]"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=li.list-group-item:nth-child(5) > form.float-right.d-inline > button.btn:nth-child(2) > i.far.fa-trash-alt.fa-lg.text-danger.float-right"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBs0BtAVgF0WAMwxIAtlwICARgFcwYbBIHdJFEBjDM1GCHlCQA5gDkIohMzRqo7CChTNBEJAAJHMMElsMYEdmFcQMOwGzmAIVGAwACYQWAbIruw6kUhoBgyalElQ9JhYAPJIUcjMZAC+lBhQdHrgEMam5viy8thqYACeNE0gKDJSomiZINa29s1gOFlVudiFxUilIBXq1Yu4WDLs7JVQOBtbO6tQeFx8u5r4YShgBKEINwBMy0A"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "9,0"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 3,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<i/>)"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//li[5]/form[1]/button[1]/i[1]"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=li.list-group-item:nth-child(5) > form.float-right.d-inline > button.btn:nth-child(2) > i.far.fa-trash-alt.fa-lg.text-danger.float-right"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBs0BtAVgF0WAMwxIAtlwICARgFcwYbBIHdJFEBjDM1GCHlCQA5gDkIohMzRqo7CChTNBEJAAJHMMElsMYEdmFcQMOwGzmAIVGAwACYQWAbIruw6kUhoBgyalElQ9JhYAPJIUcjMZAC+lBhQdHrgEMam5viy8thqYACeNE0gKDJSomiZINa29s1gOFlVudiFxUilIBXq1Yu4WDLs7JVQOBtbO6tQeFx8u5r4YShgAEzLQA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "1,-2"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 3,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<i/>)"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//li[4]/form[1]/button[1]/i[1]"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=li.list-group-item:nth-child(4) > form.float-right.d-inline > button.btn:nth-child(2) > i.far.fa-trash-alt.fa-lg.text-danger.float-right"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBs0BtAFgF0WAMwxIAtlwICARgFcwYbBIHdJFEBjDM1GCHlCQA5gDkIohMzRqo7CChTNBEJAAJHMMElsMYEdmFcQMOwGzmAIVGAwACYQWAbIruw6kUhoBgyalElQ9JhYAPJIUcjMZAC+lBhQdHrgEMam5viy8thqYACeNE0gKDJSomiZINa29s1gOFlVudiFxUilIBXq1Yu4WDLs7JVQOBtbO6tQeFx8u5r4aNfFcBg0KApRGJyPYY-LQA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "4,9"
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 3,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "clickAt",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "tac",
+                    "value": "(<button/>)"
+                  },
+                  {
+                    "type": "xpath:position",
+                    "value": "//li[3]/form[1]/button[1]"
+                  },
+                  {
+                    "type": "xpath:attributes",
+                    "value": "xpath=(//button[@type='submit'])[3]"
+                  },
+                  {
+                    "type": "css:position",
+                    "value": "css=li.list-group-item:nth-child(3) > form.float-right.d-inline > button.btn:nth-child(2)"
+                  }
+                ],
+                "tac": "TAC_LOCATOR:N4IgLghgxgtAbgUwE4GcCWB7AdiAXCARgDpiCQAaEADwAcIwALPEAehYBs0BtAZgF0WAMwxIAtlwICARgFcwYbBL4UQGMMxUYIeUJADmAOQiiEzWfOwqwATxqn8KGVNFp1lKOwgoUZsDkrsGFD0mFgA8kgAJsjMZAC+lEF0OuAQhsb2IMJiKtBgocwsCpEYKCzR7AhgCAD6xRgsACwsKiaMGJHMNKVuIB5ePviCgfQwSGh6DGAABJEwaFicWKYBQSHYEdFIsSAJqlA027i6aUYmzAs0cla2mQxokdH+IFgZzFAoSIIuj5UA7hAkFUMABrBDPOAQdgyTIgniiACscFEAC8AEyCLAoBHsAgyFCCGgMawyAAMDBokVJ1hBtMYCBoAA4qII0AwCGiIFJ2AArAHWJAYTCRQR6FAonkYUlwEEYPQqQLBfIbKIxfDxRJQHC4LAydjsTVQPBcE7pc74NAqfreZiCQHTO0wMBILwMGBQmaO9h6abVKhgGCRCBYPTIB0jAPjSa9RXrcKqo6EXZ8TXqfAMCA0GjWeq7IA"
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            },
+            {
+              "name": "close",
+              "target": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": "win_ser_local"
+                  }
+                ],
+                "tac": ""
+              },
+              "value": {
+                "usedIndex": 0,
+                "options": [
+                  {
+                    "type": "other",
+                    "value": ""
+                  }
+                ],
+                "tac": ""
+              },
+              "pwt": {
+                "pbw": 0,
+                "paw": 0,
+                "prw": 0,
+                "pdw": 0
+              },
+              "comment": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
