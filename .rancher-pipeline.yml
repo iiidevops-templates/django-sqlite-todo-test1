@@ -145,6 +145,7 @@ stages:
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.url: ${CICD_GIT_URL}
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
+        web.deployName: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-serv
       catalogTemplate: cattle-global-data:iii-dev-charts3-test-webinspect
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-wi
       targetNamespace: ${CICD_GIT_REPO_NAME}
