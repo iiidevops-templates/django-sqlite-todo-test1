@@ -8,6 +8,7 @@ stages:
         git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.url: ${CICD_GIT_URL}
+        harbor.host: harbor-dev3.iiidevops.org
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
       catalogTemplate: cattle-global-data:iii-dev-charts3-scan-sonarqube
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-sq
@@ -18,6 +19,7 @@ stages:
       include:
       - master
       - develop
+
 - name: Test--Checkmarx source code scan
   iiidevops: checkmarx
   steps:
@@ -27,6 +29,7 @@ stages:
         git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.url: ${CICD_GIT_URL}
+        harbor.host: harbor-dev3.iiidevops.org
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
       catalogTemplate: cattle-global-data:iii-dev-charts3-scan-checkmarx
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-cmx
@@ -37,6 +40,7 @@ stages:
       include:
       - master
       - develop
+
 - name: Deploy--Set Web environment variables
   iiidevops: deployed-environments
   steps:
@@ -60,6 +64,7 @@ stages:
     branch:
       include:
       - master
+
 - name: Build--Build and push docker image
   iiidevops: deployed-environments
   steps:
@@ -79,6 +84,7 @@ stages:
     branch:
       include:
       - master
+
 - name: Deploy--Web
   iiidevops: deployed-environments
   steps:
@@ -101,6 +107,7 @@ stages:
     branch:
       include:
       - master
+
 - name: Deploy--Wait Web deployment
   iiidevops: deployed-environments
   steps:
@@ -123,6 +130,7 @@ stages:
     branch:
       include:
       - master
+
 - name: Test--ZAP
   iiidevops: zap
   steps:
@@ -132,6 +140,7 @@ stages:
         git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.url: ${CICD_GIT_URL}
+        harbor.host: harbor-dev3.iiidevops.org
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
         web.deployName: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-serv
         web.port: 8080
@@ -143,6 +152,7 @@ stages:
     branch:
       include:
       - master
+
 - name: Test--WebInspect
   iiidevops: webinspect
   steps:
@@ -152,6 +162,7 @@ stages:
         git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.url: ${CICD_GIT_URL}
+        harbor.host: harbor-dev3.iiidevops.org
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
         web.deployName: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-serv
       catalogTemplate: cattle-global-data:iii-dev-charts3-test-webinspect
@@ -162,6 +173,7 @@ stages:
     branch:
       include:
       - master
+
 - name: Test--Postman
   iiidevops: postman
   steps:
@@ -171,6 +183,7 @@ stages:
         git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.url: ${CICD_GIT_URL}
+        harbor.host: harbor-dev3.iiidevops.org
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
         web.deployName: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-serv
         web.port: 8080
@@ -182,6 +195,7 @@ stages:
     branch:
       include:
       - master
+
 - name: Test--SideeX
   iiidevops: sideex
   steps:
@@ -191,14 +205,16 @@ stages:
         git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.url: ${CICD_GIT_URL}
+        harbor.host: harbor-dev3.iiidevops.org
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
         web.deployName: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-serv
         web.port: 8080
       catalogTemplate: cattle-global-data:iii-dev-charts3-test-sideex
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-sdx
       targetNamespace: ${CICD_GIT_REPO_NAME}
-      version: 0.2.0
+      version: 0.3.0
   when:
     branch:
       include:
       - master
+
