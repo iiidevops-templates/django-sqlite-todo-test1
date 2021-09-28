@@ -29,7 +29,7 @@
                 "options": [
                   {
                     "type": "other",
-                    "value": "${target_origin}"
+                    "value": "${target_url}"
                   }
                 ],
                 "tac": ""
@@ -39,7 +39,7 @@
                 "options": [
                   {
                     "type": "other",
-                    "value": "${target_origin}"
+                    "value": "${target_url}"
                   }
                 ],
                 "tac": ""
