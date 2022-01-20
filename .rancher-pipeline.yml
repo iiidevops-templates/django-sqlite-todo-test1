@@ -111,7 +111,7 @@ stages:
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.url: ${CICD_GIT_URL}
         harbor.host: harbor.local
-        imagePullSecrets[0].name: harbor-local
+        imagePullSecrets[0].name: harbor-localtest
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
         web.imageTag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:${CICD_GIT_COMMIT}
         web.port: 8080
