@@ -51,7 +51,6 @@ stages:
     branch:
       include:
       - skip-master
-      - master
 - name: Deploy--Set Web environment variables
   iiidevops: deployed-environments
   steps:
@@ -76,7 +75,6 @@ stages:
     branch:
       include:
       - skip-master
-      - master
 - name: Build--Build and push docker image
   iiidevops: deployed-environments
   steps:
@@ -96,7 +94,6 @@ stages:
     branch:
       include:
       - skip-master
-      - master
 - name: Build--Scan docker image
   iiidevops: deployed-environments
   steps:
@@ -112,7 +109,6 @@ stages:
     branch:
       include:
       - skip-master
-      - master
 - name: Deploy--Web
   iiidevops: deployed-environments
   steps:
@@ -137,7 +133,6 @@ stages:
     branch:
       include:
       - skip-master
-      - master
 - name: Deploy--Wait Web deployment
   iiidevops: deployed-environments
   steps:
@@ -160,7 +155,6 @@ stages:
     branch:
       include:
       - skip-master
-      - master
 - name: Test--ZAP
   iiidevops: zap
   steps:
@@ -182,7 +176,6 @@ stages:
     branch:
       include:
       - skip-master
-      - master
 - name: Test--WebInspect
   iiidevops: webinspect
   steps:
@@ -224,7 +217,6 @@ stages:
     branch:
       include:
       - skip-master
-      - master
 - name: Test--SideeX
   iiidevops: sideex
   steps:
@@ -246,4 +238,3 @@ stages:
     branch:
       include:
       - skip-master
-      - master
