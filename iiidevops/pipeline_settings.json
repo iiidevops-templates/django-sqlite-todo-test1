@@ -1,6 +1,6 @@
 {
   "name": "Python-Django-SQLite",
-  "description": "Python 3.7 / Django 3.1.7 / Sqlite <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/django-sqlite-todo-test1/blob/master/README.md' target='_blank'>Todo 範本說明</a><hr />  <li><strong>v1.18</strong>:調整 Web DB chart 支援掛載 NFS Volume 參數</li>  <li><strong>v1.17</strong>:增加掃描 docker Image 功能, Web chart 支援掛載 Volume</li>  <li><strong>v1.16</strong>:SonarQube均改用 helm chart 架構, Postman POD 名稱加上 git hash</li>",
+  "description": "Python 3.7 / Django 3.1.7 / Sqlite <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/django-sqlite-todo-test1/blob/master/README.md' target='_blank'>Todo 範本說明</a><hr /><ul>  <li><strong>v1.19</strong>:增加自動計算原始碼行數功能</li>  <li><strong>v1.18</strong>:調整 Web DB chart 支援掛載 NFS Volume 參數</li>  <li><strong>v1.17</strong>:增加掃描 docker Image 功能, Web chart 支援掛載 Volume</li></ul>",
   "arguments": [
   ]
 }
