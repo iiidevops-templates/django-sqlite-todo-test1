@@ -1,6 +1,6 @@
 {
   "name": "Python-Django-SQLite",
-  "description": "Python 3.7 / Django 3.1.7 / Sqlite <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/django-sqlite-todo-test1/blob/master/README.md' target='_blank'>Todo 範本說明</a><hr /><ul>  <li><strong>v1.20</strong>:整合 rancher-cli 與 deployment-wait 至 iiidevops-cli</li>  <li><strong>v1.19</strong>:增加自動計算原始碼行數功能</li>  <li><strong>v1.18</strong>:調整 Web DB chart 支援掛載 NFS Volume 參數</li></ul>",
+  "description": "Python 3.7 / Django 3.1.7 / Sqlite <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/django-sqlite-todo-test1/blob/master/README.md' target='_blank'>Todo 範本說明</a><hr /><ul>  <li><strong>v1.26</strong>:增加定義 SonarQube 與 Checkmarx 黑白名單功能</li>  <li><strong>v1.20</strong>:整合 rancher-cli 與 deployment-wait 至 iiidevops-cli</li>  <li><strong>v1.19</strong>:增加自動計算原始碼行數功能</li></ul>",
   "arguments": [
   ]
 }
